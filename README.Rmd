@@ -59,6 +59,11 @@ setorder(ans, created_at)
 
 # A more concise message
 ans[, message := sprintf("%s (%s to this %s) (files: %s)", message, link, type, files)]
-knitr::kable(ans[, .(created_at, user, message, type)])
+
+# Removing date
+ans[, created_at := as.IDate(created_at)]
+ans[, message := gsub("[[:print:]]+USCbiostats/PM566/issues?/[0-9]+", "#link#", message)]
+
+knitr::kable(ans[, .(created_at, user, message, type)], format = "html")
 ```
 
