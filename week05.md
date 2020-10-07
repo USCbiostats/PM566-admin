@@ -61,7 +61,7 @@ type
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -89,7 +89,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -119,7 +119,7 @@ NA
 
 Finalizing slides for week 5 (see \#23)
 ([link](https://github.com/USCbiostats/PM566/commit/17b02a0200716bcfbdb8058e28bf1eb814c0564f)
-to this NA) (files:
+to this homework) (files:
 [content/assignment/05-lab.Rmd](https://github.com/USCbiostats/PM566/blob/17b02a0200716bcfbdb8058e28bf1eb814c0564f/content/assignment/05-lab.Rmd),
 [content/assignment/05-lab.html](https://github.com/USCbiostats/PM566/blob/17b02a0200716bcfbdb8058e28bf1eb814c0564f/content/assignment/05-lab.html),
 [static/slides/05-data-wrangling/data-prep.R](https://github.com/USCbiostats/PM566/blob/d14e381c4e89d64b579e2e8c71dc920dba5e3e2d/static/slides/05-data-wrangling/data-prep.R))
@@ -128,7 +128,7 @@ to this NA) (files:
 
 <td style="text-align:left;">
 
-NA
+homework
 
 </td>
 
@@ -152,7 +152,7 @@ NA
 
 \#link\#
 ([link](https://github.com/gvegayon/PM566-labs/commit/8d53c51142a9e0f1aa75142aabcf0a27acabf28a)
-to this NA) (files:
+to this lab) (files:
 [.gitignore](https://github.com/gvegayon/PM566-labs/blob/8d53c51142a9e0f1aa75142aabcf0a27acabf28a/.gitignore),
 [PM566-labs.Rproj](https://github.com/gvegayon/PM566-labs/blob/8d53c51142a9e0f1aa75142aabcf0a27acabf28a/PM566-labs.Rproj),
 [README.Rmd](https://github.com/gvegayon/PM566-labs/blob/8d53c51142a9e0f1aa75142aabcf0a27acabf28a/README.Rmd),
@@ -162,7 +162,7 @@ to this NA) (files:
 
 <td style="text-align:left;">
 
-NA
+lab
 
 </td>
 
@@ -186,7 +186,7 @@ NA
 
 \#link\#
 ([link](https://github.com/hankezhe/PM566-LAB-ASSIGNMENT/commit/75fdc27bed1cc7652787b423ad91b8ccf7bc27fe)
-to this NA) (files:
+to this lab) (files:
 [05-lab.Rmd](https://github.com/hankezhe/PM566-LAB-ASSIGNMENT/blob/75fdc27bed1cc7652787b423ad91b8ccf7bc27fe/05-lab.Rmd),
 [05-lab.html](https://github.com/hankezhe/PM566-LAB-ASSIGNMENT/blob/75fdc27bed1cc7652787b423ad91b8ccf7bc27fe/05-lab.html))
 
@@ -194,7 +194,7 @@ to this NA) (files:
 
 <td style="text-align:left;">
 
-NA
+lab
 
 </td>
 
@@ -563,7 +563,7 @@ lab
 
 Loading the data \#link\#
 ([link](https://github.com/shiyushen/PM566-labs/commit/cc0925c9b9c349e94e2d04c1237798d36fdb51bf)
-to this NA) (files:
+to this lab) (files:
 [.gitignore](https://github.com/shiyushen/PM566-labs/blob/cc0925c9b9c349e94e2d04c1237798d36fdb51bf/.gitignore),
 [PM566-labs.Rproj](https://github.com/shiyushen/PM566-labs/blob/cc0925c9b9c349e94e2d04c1237798d36fdb51bf/PM566-labs.Rproj),
 [README.md](https://github.com/shiyushen/PM566-labs/blob/cc0925c9b9c349e94e2d04c1237798d36fdb51bf/README.md),
@@ -573,7 +573,7 @@ to this NA) (files:
 
 <td style="text-align:left;">
 
-NA
+lab
 
 </td>
 
@@ -627,7 +627,7 @@ lab
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -784,7 +784,7 @@ lab
 
 Loading the data \#link\#
 ([link](https://github.com/stephtring/PM566-labs/commit/486d7f54ee7820515c969bae9999990cd41ad95f)
-to this NA) (files:
+to this lab) (files:
 [.gitignore](https://github.com/stephtring/PM566-labs/blob/486d7f54ee7820515c969bae9999990cd41ad95f/.gitignore),
 [PM566-labs.Rproj](https://github.com/stephtring/PM566-labs/blob/486d7f54ee7820515c969bae9999990cd41ad95f/PM566-labs.Rproj),
 [README.Rmd](https://github.com/stephtring/PM566-labs/blob/486d7f54ee7820515c969bae9999990cd41ad95f/README.Rmd),
@@ -794,7 +794,7 @@ to this NA) (files:
 
 <td style="text-align:left;">
 
-NA
+lab
 
 </td>
 
@@ -991,3 +991,97 @@ lab
 </tbody>
 
 </table>
+
+## Links to homeworks
+
+    ## processing file: 06-lab.Rmd
+
+    ## Warning: Missing column names filled in: 'X1' [1]
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   X1 = col_double(),
+    ##   description = col_character(),
+    ##   medical_specialty = col_character(),
+    ##   sample_name = col_character(),
+    ##   transcription = col_character(),
+    ##   keywords = col_character()
+    ## )
+
+    ## output file: 06-lab.knit.md
+
+/usr/lib/rstudio/bin/pandoc/pandoc +RTS -K512m -RTS 06-lab.utf8.md –to
+html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
+–output george.html –email-obfuscation none –self-contained
+–standalone –section-divs –template
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/h/default.html
+–no-highlight –variable highlightjs=1 –variable ‘theme:bootstrap’
+–include-in-header /tmp/RtmpWtZdBg/rmarkdown-str30ec19afc8a9.html
+–mathjax –variable
+‘mathjax-url:<https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML>’
+–lua-filter
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/lua/pagebreak.lua
+–lua-filter
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/lua/latex-div.lua
+
+    ## 
+    ## Output created: george.html
+
+## Links to homework
+
+  - The user’s USCbiostats is available
+    [here](homeworks-week05/homework-USCbiostats.html).
+
+## Links to lab
+
+  - The user’s gvegayon is available
+    [here](labs-week05/lab-gvegayon.html).
+
+  - The user’s hankezhe is available
+    [here](labs-week05/lab-hankezhe.html).
+
+  - The user’s HopeW233 is available
+    [here](labs-week05/lab-HopeW233.html).
+
+  - The user’s mbolshakova is available
+    [here](labs-week05/lab-mbolshakova.html).
+
+  - The user’s asuasu95 is available
+    [here](labs-week05/lab-asuasu95.html).
+
+  - The user’s yina-liu is available
+    [here](labs-week05/lab-yina-liu.html).
+
+  - The user’s eshkim1021 is available
+    [here](labs-week05/lab-eshkim1021.html).
+
+  - The Rmd of user Shan-shan-666 was not able to be knitted.
+
+  - The user’s shawnyeusc is available
+    [here](labs-week05/lab-shawnyeusc.html).
+
+  - The Rmd of user jiqingwu1997 was not able to be knitted.
+
+  - The user’s ameihao is available
+    [here](labs-week05/lab-ameihao.html).
+
+  - The user’s shiyushen is available
+    [here](labs-week05/lab-shiyushen.html).
+
+  - The Rmd of user slee2424 was not able to be knitted.
+
+  - The user’s Luqing521 is available
+    [here](labs-week05/lab-Luqing521.html).
+
+  - The user’s stephtring is available
+    [here](labs-week05/lab-stephtring.html).
+
+  - The user’s cbegay89 is available
+    [here](labs-week05/lab-cbegay89.html).
+
+  - The Rmd of user Weijia-H was not able to be knitted.
+
+  - The user’s suyeonry is available
+    [here](labs-week05/lab-suyeonry.html).
+
+  - The user MingzhiYe16 didn’t uploaded either the Rmd or HTML files.

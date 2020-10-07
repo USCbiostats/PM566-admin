@@ -60,23 +60,35 @@ list_cross_ref_api <- function(
   
   # Now getting the contents of the commit:
   message("Getting the details of the commits...", appendLF = FALSE)
-  files <- matrix(NA_character_, nrow = nrow(timeline), ncol = 2)
+  files <- vector("list", nrow(timeline))
   for (i in 1:nrow(timeline)) {
     message(i, ", ", appendLF = FALSE)
-    tmp <- commit_info(timeline$commit_id[i], timeline$repo[i], ...)
-    if (length(tmp))
-      files[i, ] <- tmp
+    files[[i]] <- commit_info(
+      timeline$commit_id[i], timeline$repo[i], ...)
   }
   message("done.")
   
-  timeline$message <- files[,1]
-  timeline$files   <- files[,2]
+  timeline <- cbind(timeline, rbindlist(files))
   
   # Checking which ones were about a lab
   timeline[, type := fifelse(
     grepl("lab", tolower(message)), "lab",
     fifelse(grepl("hw|assignme", tolower(message)), "homework", NA_character_)
   )]
+  
+  # Filling the emptyones
+  timeline[, type := fcoalesce(type, sapply(fnames, function(f) {
+    if (any(grepl("assig|hw|homew", tolower(f))))
+      "homework"
+    else
+      NA_character_
+  }))]
+  timeline[, type := fcoalesce(type, sapply(fnames, function(f) {
+    if (any(grepl("lab", tolower(f))))
+      "lab"
+    else
+      NA_character_
+  }))]
   
   timeline
   
@@ -106,18 +118,24 @@ commit_info <- function(
   
   if (inherits(response, "error")) {
     warning("httr::GET failed.")
-    return(NULL)
+    return(data.table(
+      message = NA_character_,
+      flinks  = list(),
+      fnames  = list()
+    ))
   }
   
   commit <- httr::content(response)
   
-  files <- lapply(commit$files, function(f) {
-    sprintf("[%s](%s)", f$filename, f$blob_url)
-  })
+  msg    <- commit$commit$message
+  fnames <- lapply(commit$files, "[[", "filename")
+  flinks <- lapply(commit$files, "[[", "blob_url")
   
-  c(
-    message = commit$commit$message,
-    files   = paste(files, collapse = ", ")
+  
+  data.table(
+    message = if (length(msg) == 0) NA_character_ else msg,
+    flinks  = list(flinks),
+    fnames  = list(fnames)
   )
   
 }

@@ -61,7 +61,7 @@ type
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -89,7 +89,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -148,7 +148,7 @@ lab
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -238,7 +238,7 @@ lab
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -266,7 +266,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -325,7 +325,7 @@ lab
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -416,7 +416,7 @@ lab
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -444,7 +444,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -504,7 +504,7 @@ lab
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -532,7 +532,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -560,7 +560,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -588,7 +588,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -616,7 +616,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -644,7 +644,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -674,14 +674,14 @@ NA
 
 \#link\#
 ([link](https://github.com/asuasu95/pm566-hw1/commit/8e24dd075ffb3d77a7448c71dcc4fdcf39214dc7)
-to this NA) (files:
+to this homework) (files:
 [pm566hw1.html](https://github.com/asuasu95/pm566-hw1/blob/8e24dd075ffb3d77a7448c71dcc4fdcf39214dc7/pm566hw1.html))
 
 </td>
 
 <td style="text-align:left;">
 
-NA
+homework
 
 </td>
 
@@ -707,14 +707,14 @@ NA
 
 This reverts commit 8e24dd075ffb3d77a7448c71dcc4fdcf39214dc7.
 ([link](https://github.com/asuasu95/pm566-hw1/commit/ba8849cbc2c5c704cd4f813f01409a487b996b61)
-to this NA) (files:
+to this homework) (files:
 [pm566hw1.html](https://github.com/asuasu95/pm566-hw1/blob/8e24dd075ffb3d77a7448c71dcc4fdcf39214dc7/pm566hw1.html))
 
 </td>
 
 <td style="text-align:left;">
 
-NA
+homework
 
 </td>
 
@@ -860,7 +860,7 @@ lab
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -937,3 +937,107 @@ lab
 </tbody>
 
 </table>
+
+## Links to homeworks
+
+    ## processing file: 06-lab.Rmd
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:data.table':
+    ## 
+    ##     between, first, last
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+    ## ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
+
+    ## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+    ## ✓ tibble  3.0.2     ✓ forcats 0.5.0
+    ## ✓ tidyr   1.1.0
+
+    ## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+    ## x dplyr::between()   masks data.table::between()
+    ## x dplyr::filter()    masks stats::filter()
+    ## x dplyr::first()     masks data.table::first()
+    ## x dplyr::lag()       masks stats::lag()
+    ## x dplyr::last()      masks data.table::last()
+    ## x purrr::transpose() masks data.table::transpose()
+
+    ## Warning: Missing column names filled in: 'X1' [1]
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   X1 = col_double(),
+    ##   description = col_character(),
+    ##   medical_specialty = col_character(),
+    ##   sample_name = col_character(),
+    ##   transcription = col_character(),
+    ##   keywords = col_character()
+    ## )
+
+    ## output file: 06-lab.knit.md
+
+/usr/lib/rstudio/bin/pandoc/pandoc +RTS -K512m -RTS 06-lab.utf8.md –to
+html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
+–output george.html –email-obfuscation none –self-contained
+–standalone –section-divs –template
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/h/default.html
+–no-highlight –variable highlightjs=1 –variable ‘theme:bootstrap’
+–include-in-header /tmp/RtmpWtZdBg/rmarkdown-str30ec69109b50.html
+–mathjax –variable
+‘mathjax-url:<https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML>’
+–lua-filter
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/lua/pagebreak.lua
+–lua-filter
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/lua/latex-div.lua
+
+    ## 
+    ## Output created: george.html
+
+## Links to homework
+
+  - The user’s asuasu95 is available
+    [here](homeworks-week04/homework-asuasu95.html).
+
+## Links to lab
+
+  - The Rmd of user Shan-shan-666 was not able to be knitted.
+
+  - The user’s hankezhe is available
+    [here](labs-week04/lab-hankezhe.html).
+
+<!-- end list -->
+
+    ## Warning in normalizePath(path, winslash = winslash, mustWork = mustWork):
+    ## path[1]="/tmp/RtmpWtZdBg/PM-566-Lab-d04acd35b8fb602882a4610fd040844b1efe6fd2/
+    ## Lab%204%20Exercises.Rmd": No such file or directory
+
+  - The Rmd of user eshkim1021 was not able to be knitted.
+
+  - The user’s jiaheche is available
+    [here](labs-week04/lab-jiaheche.html).
+
+  - The user’s HopeW233 is available
+    [here](labs-week04/lab-HopeW233.html).
+
+  - The user’s Luqing521 is available
+    [here](labs-week04/lab-Luqing521.html).
+
+  - The user’s asuasu95 is available
+    [here](labs-week04/lab-asuasu95.html).
+
+  - The user’s bcruiz is available [here](labs-week04/lab-bcruiz.html).
+
+  - The user’s shiyushen is available
+    [here](labs-week04/lab-shiyushen.html).
+
+  - The user’s Weijia-H is available
+    [here](labs-week04/lab-Weijia-H.html).

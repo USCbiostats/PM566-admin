@@ -3,11 +3,6 @@
 
 ``` r
 library(data.table)
-```
-
-    ## data.table 1.12.8 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
-
-``` r
 library(stringr)
 
 # API access
@@ -66,7 +61,7 @@ type
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -94,7 +89,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -122,7 +117,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -150,7 +145,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -592,7 +587,7 @@ homework
 
 \#link\#
 ([link](https://github.com/MingzhiYe16/PM566lab6/commit/f0f3f55e33c085a71ce6985da0e650bfa3c177bb)
-to this NA) (files:
+to this homework) (files:
 [Assignment5.html](https://github.com/MingzhiYe16/PM566lab6/blob/f0f3f55e33c085a71ce6985da0e650bfa3c177bb/Assignment5.html),
 [Assignment5.md](https://github.com/MingzhiYe16/PM566lab6/blob/f0f3f55e33c085a71ce6985da0e650bfa3c177bb/Assignment5.md))
 
@@ -600,7 +595,7 @@ to this NA) (files:
 
 <td style="text-align:left;">
 
-NA
+homework
 
 </td>
 
@@ -622,7 +617,7 @@ NA
 
 <td style="text-align:left;">
 
-([link](NA) to this NA) (files: )
+NA ([link](NA) to this NA) (files: )
 
 </td>
 
@@ -936,14 +931,14 @@ homework
 
 \#link\#
 ([link](https://github.com/mbolshakova/PM566-Homework/commit/620cb52e89e358e7f2905fec9f0d0e291e8b4015)
-to this NA) (files:
+to this homework) (files:
 [Homework 2.Rmd](https://github.com/mbolshakova/PM566-Homework/blob/620cb52e89e358e7f2905fec9f0d0e291e8b4015/Homework%202.Rmd))
 
 </td>
 
 <td style="text-align:left;">
 
-NA
+homework
 
 </td>
 
@@ -983,3 +978,104 @@ homework
 </tbody>
 
 </table>
+
+## Links to homeworks
+
+    ## processing file: 06-lab.Rmd
+
+    ## Warning: Missing column names filled in: 'X1' [1]
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   X1 = col_double(),
+    ##   description = col_character(),
+    ##   medical_specialty = col_character(),
+    ##   sample_name = col_character(),
+    ##   transcription = col_character(),
+    ##   keywords = col_character()
+    ## )
+
+    ## output file: 06-lab.knit.md
+
+/usr/lib/rstudio/bin/pandoc/pandoc +RTS -K512m -RTS 06-lab.utf8.md –to
+html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
+–output george.html –email-obfuscation none –self-contained
+–standalone –section-divs –template
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/h/default.html
+–no-highlight –variable highlightjs=1 –variable ‘theme:bootstrap’
+–include-in-header /tmp/RtmpWtZdBg/rmarkdown-str30ec65078d01.html
+–mathjax –variable
+‘mathjax-url:<https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML>’
+–lua-filter
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/lua/pagebreak.lua
+–lua-filter
+/home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/lua/latex-div.lua
+
+    ## 
+    ## Output created: george.html
+
+## Links to homework
+
+  - The md of user HopeW233 was not able to be knitted.
+
+  - The user’s RuowenWang123 is available
+    [here](homeworks-week06/homework-RuowenWang123.html).
+
+  - The user’s hankezhe is available
+    [here](homeworks-week06/homework-hankezhe.html).
+
+  - The user’s stephtring is available
+    [here](homeworks-week06/homework-stephtring.html).
+
+  - The Rmd of user bcruiz was not able to be knitted.
+
+  - The user’s MingzhiYe16 is available
+    [here](homeworks-week06/homework-MingzhiYe16.html).
+
+  - The user’s Luqing521 is available
+    [here](homeworks-week06/homework-Luqing521.html).
+
+<!-- end list -->
+
+    ## Warning in normalizePath(path, winslash = winslash,
+    ## mustWork = mustWork): path[1]="/tmp/RtmpWtZdBg/PM566-
+    ## Homework-620cb52e89e358e7f2905fec9f0d0e291e8b4015/Homework%202.Rmd": No such
+    ## file or directory
+
+  - The Rmd of user mbolshakova was not able to be knitted.
+
+  - The Rmd of user yina-liu was not able to be knitted.
+
+## Links to lab
+
+  - The md of user eshkim1021 was not able to be knitted.
+
+  - The user’s jiaheche is available
+    [here](labs-week06/lab-jiaheche.html).
+
+  - The md of user hankezhe was not able to be knitted.
+
+<!-- end list -->
+
+    ## Warning in normalizePath(path, winslash = winslash, mustWork = mustWork):
+    ## path[1]="/tmp/RtmpWtZdBg/PM566-labs-d3b72ca8b74409c92404b6d384dc474c8f5cf75d/
+    ## Lab%206.Rmd": No such file or directory
+
+  - The Rmd of user mbolshakova was not able to be knitted.
+
+  - The Rmd of user cbegay89 was not able to be knitted.
+
+  - The md of user slee2424 was not able to be knitted.
+
+  - The md of user MingzhiYe16 was not able to be knitted.
+
+  - The md of user bcruiz was not able to be knitted.
+
+  - The md of user HopeW233 was not able to be knitted.
+
+  - The Rmd of user Shan-shan-666 was not able to be knitted.
+
+  - The user’s Luqing521 is available
+    [here](labs-week06/lab-Luqing521.html).
+
+  - The Rmd of user shawnyeusc was not able to be knitted.

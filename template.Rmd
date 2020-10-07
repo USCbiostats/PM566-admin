@@ -1,7 +1,7 @@
 ---
 output: github_document
 params:
-  issuenum: 25
+  issuenum: NULL # 25
   week: 6
 ---
 
@@ -16,7 +16,7 @@ source("list_cross_ref_api.R", echo=FALSE)
 ```
 
 
-```{r webscraping, message=FALSE, cache=TRUE, echo=FALSE}
+```{r webscraping, message=FALSE, cache=FALSE, echo=FALSE}
 library(httr)
 # Setting up the token
 if (file.exists(".github_app.R")) {
@@ -49,6 +49,7 @@ ans[, link := sprintf("[link](%s)", commit_url)]
 setorder(ans, created_at)
 
 # A more concise message
+ans[, files := unlist(Map(function(fn, fl) paste(sprintf("[%s](%s)", fn, fl), collapse=", "), fn = fnames, fl = flinks))]
 ans[, message := sprintf("%s (%s to this %s) (files: %s)", message, link, type, files)]
 
 # Removing date
@@ -56,5 +57,161 @@ ans[, created_at := as.IDate(created_at)]
 ans[, message := gsub("[[:print:]]+USCbiostats/PM566/issues?/[0-9]+", "#link#", message)]
 
 knitr::kable(ans[, .(created_at, user, message, type)], format = "html")
+```
+
+## Links to homeworks
+
+```{r homeworks, results='asis', echo = FALSE}
+
+#' Knit a (R)markdown document from a given commit
+#' This function will download a file from github in the form of
+#' https://github.com/[usrname]/(raw|blob)/[commit id]/[path to doc].(Rmd|md)
+download_and_knit <- function(url, ...) {
+  
+  fn <- stringr::str_extract(url, "(?<=/(raw|blob)/[[:alnum:]]{10,500}/).+")
+  gh <- gsub(paste0("/?",fn), "", url)
+  gh <- paste0(gsub("/(raw|blob)/", "/archive/", gh), ".zip")
+  
+  # Downloading
+  tmpzip <- tempfile(fileext = ".zip")
+  download.file(gh, destfile = tmpzip)
+  unzip(tmpzip, exdir = tempdir())
+  
+  # Getting the file name
+  fn_gh <- stringr::str_extract(
+    gh,
+    "(?<=/)[[:alnum:]-_]+/archive/[[:alnum:]]+"
+    )
+  
+  fn_gh <- paste0(tempdir(), "/", gsub("/archive/", "-", fn_gh))
+  
+  rmarkdown::render(
+    input = file.path(fn_gh, fn),
+    ...
+  )
+  
+}
+
+download_and_knit(
+  url = "https://github.com/HopeW233/PM566-labs/blob/d8eb81e619b24b8c2d80085f2c63333a299b381a/06-lab.Rmd",
+  output_file = "george.html",
+  output_format = rmarkdown::html_document()
+  )
+
+doctype <- c("homework", "lab")
+for (doc in doctype) {
+  
+  cat("\n## Links to ", doc, "\n\n")
+
+  dname <- sprintf("%ss-%s", doc, params$week)
+  if (!dir.exists(dname))
+    dir.create(dname)
+  
+  ans[, usrname := gsub("(^\\[|\\].+)", "", user)]
+  homeworks <- ans[type == doc]
+  
+  for (u in unique(homeworks$usrname)) {
+    
+    # Retrieving the user
+    tmp <- homeworks[usrname == u]
+    
+    # No need to redo if already processed
+    if (file.exists(sprintf("%s/%s-%s.html", dname, doc, u)))
+      next
+    
+    # Getting the last md/html, or markdown file
+    files  <- unlist(tmp$fnames)
+    flinks <- unlist(tmp$flinks)
+    
+    # Getting the latest HTML
+    html <- which(grepl("\\.html?$", files, ignore.case = TRUE))
+    if (length(html) > 0) {
+      html <- html[length(html)]
+      
+      download.file(
+        url      = gsub("/blob/", "/raw/", flinks[html]),
+        destfile = sprintf("%s/%s-%s.html", dname, doc, u)
+      )
+      
+      cat(sprintf(
+        "\n- The user's %s is available [here](%s).\n",
+        u, sprintf("%s/%s-%s.html", dname, doc, u)
+        ))
+      
+      next
+      
+    }
+    
+    # Option 2: Render the md directly
+    md <- which(grepl("\\.md$", files, ignore.case = TRUE))
+    if (length(md) > 0) {
+      md <- md[length(md)]
+      
+      # download.file(
+      #   url      = gsub("/blob/", "/raw/", flinks[md]),
+      #   destfile = sprintf("%s/%s-%s.md", dname, doc, u)
+      # )
+      
+      out <- tryCatch(download_and_knit(
+        url = gsub("/blob/", "/raw/", flinks[md]),
+        output_dir  = dname, 
+        output_file = sprintf("%s-%s.html", u, doc),
+        output_format = rmarkdown::html_document(),
+        quiet = TRUE,
+        envir = new.env()
+      ), error = function(e) e)
+      
+      if (!inherits(out, "error")) {
+        cat(sprintf(
+          "\n- The user's %s is available [here](%s).\n",
+          u, sprintf("%s/%s-%s.html", dname, doc, u)
+          ))
+        
+      } else {
+        cat("\n- The md of user ", u, " was not able to be knitted.\n")    
+      }
+      
+      next
+      
+    }
+    
+    # Option 3: Render the RMD directly
+    rmd <- which(grepl("\\.rmd$", files, ignore.case = TRUE))
+    if (length(rmd) > 0) {
+      rmd <- rmd[length(rmd)]
+      
+      # download.file(
+      #   url      = gsub("/blob/", "/raw/", flinks[rmd]),
+      #   destfile = sprintf("%s/%s-%s.Rmd", dname, doc, u)
+      # )
+      
+      out <- tryCatch(download_and_knit(
+        url      = gsub("/blob/", "/raw/", flinks[rmd]),
+        output_dir  = dname, 
+        output_file = sprintf("%s-%s.html", doc, u),
+        output_format = rmarkdown::html_document(),
+        quiet = TRUE,
+        envir = new.env()
+      ), error = function(e) e)
+      
+      if (!inherits(out, "error")) {
+        cat(sprintf(
+          "\n- The user's %s is available [here](%s).\n",
+          u, sprintf("%s/%s-%s.html", dname, doc, u)
+          ))
+        
+      } else {
+        cat("\n- The Rmd of user ", u, " was not able to be knitted.\n")    
+      }
+      
+      next
+      
+    }
+    
+    cat("\n- The user ", u, " didn't uploaded either the Rmd or HTML files.\n")
+    
+  }
+}
+
 ```
 

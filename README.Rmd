@@ -10,7 +10,7 @@ weeks <- c(
   week04 = 22,
   week05 = 23,
   week06 = 25,
-  week07 = 27
+  week07 = 26
 )
 
 for (i in seq_along(weeks)) {
@@ -20,7 +20,8 @@ for (i in seq_along(weeks)) {
       input       = "template.Rmd",
       output_file = fn,
       params      = list(issuenum = weeks[i], week = names(weeks)[i]),
-      quiet       = TRUE
+      quiet       = TRUE,
+      envir = new.env()
       )
   
   cat(sprintf(
