@@ -1047,7 +1047,7 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 –standalone –section-divs –template
 /home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/h/default.html
 –no-highlight –variable highlightjs=1 –variable ‘theme:bootstrap’
-–include-in-header /tmp/RtmpddMB7e/rmarkdown-str3ab0789b9f90.html
+–include-in-header /tmp/RtmpeIiFQu/rmarkdown-str459c359a07d2.html
 –mathjax –variable
 ‘mathjax-url:<https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML>’
 –lua-filter
@@ -1062,75 +1062,80 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 
 ## Links to lab
 
-  - The user’s hankezhe is available
-    [here](labs-week07/lab-hankezhe.html).
+  - hankezhe’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-hankezhe.html).
 
-  - The user’s gvegayon is available
-    [here](labs-week07/lab-gvegayon.html).
+  - gvegayon’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-gvegayon.html).
 
-  - The user’s eshkim1021 is available
-    [here](labs-week07/lab-eshkim1021.html).
+  - eshkim1021’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-eshkim1021.html).
 
-  - The user’s bcruiz is available [here](labs-week07/lab-bcruiz.html).
+  - bcruiz’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-bcruiz.html).
 
-  - The user’s slee2424 is available
-    [here](labs-week07/lab-slee2424.html).
+  - slee2424’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-slee2424.html).
 
-  - The user’s HopeW233 is available
-    [here](labs-week07/lab-HopeW233.html).
+  - HopeW233’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-HopeW233.html).
 
-  - The user’s jiaheche is available
-    [here](labs-week07/lab-jiaheche.html).
+  - jiaheche’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-jiaheche.html).
 
-  - The user’s mbolshakova is available
-    [here](labs-week07/lab-mbolshakova.html).
+  - mbolshakova’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-mbolshakova.html).
 
-  - The user’s asuasu95 is available
-    [here](labs-week07/lab-asuasu95.html).
+  - asuasu95’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-asuasu95.html).
 
-  - The user’s MingzhiYe16 is available
-    [here](labs-week07/lab-MingzhiYe16.html).
+  - MingzhiYe16’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-MingzhiYe16.html).
 
-  - The user’s Luqing521 is available
-    [here](labs-week07/lab-Luqing521.html).
+  - Luqing521’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-Luqing521.html).
 
-  - The user’s Shan-shan-666 is available
-    [here](labs-week07/lab-Shan-shan-666.html).
+  - RuowenWang123’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-RuowenWang123.html).
 
-  - The user’s RuowenWang123 is available
-    [here](labs-week07/lab-RuowenWang123.html).
+  - ashwathkraj’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week07/lab-ashwathkraj.html). The
+    original file is available [here](NA) .
 
-  - The user’s ashwathkraj is available
-    [here](labs-week07/lab-ashwathkraj.html).
-
-  - The user’s Weijia-H is available
-    [here](labs-week07/lab-Weijia-H.html).
+  - Weijia-H’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-Weijia-H.html).
 
 <!-- end list -->
 
     ## Warning in normalizePath(path, winslash = winslash, mustWork = mustWork):
-    ## path[1]="/tmp/RtmpddMB7e/PM566-labs-97f68bd462354a741195bc49a072f5dce2056aa2/
+    ## path[1]="/tmp/RtmpeIiFQu/PM566-labs-97f68bd462354a741195bc49a072f5dce2056aa2/
     ## Week%207/READMELab7.md": No such file or directory
 
   - The md of user cbegay89 was not able to be knitted.
 
-  - The user’s shawnyeusc is available
-    [here](labs-week07/lab-shawnyeusc.html).
+  - shawnyeusc’s lab was downloaded as Rmd and compiled
+    [here](../../raw/master/labs-week07/lab-shawnyeusc.html).
 
-  - The user’s yina-liu is available
-    [here](labs-week07/lab-yina-liu.html).
+  - yina-liu’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-yina-liu.html).
 
-  - The user’s jiqingwu1997 is available
-    [here](labs-week07/lab-jiqingwu1997.html).
+  - jiqingwu1997’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week07/lab-jiqingwu1997.html). The
+    original file is available
+    [here](https://github.com/hankezhe/PM566-LAB-ASSIGNMENT/commit/7ba69f5b7a855f931c6d5e7fd12f6b0530d1f4d9)
+    .
 
-  - The user’s ameihao is available
-    [here](labs-week07/lab-ameihao.html).
+  - ameihao’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week07/lab-ameihao.html). The original
+    file is available
+    [here](https://github.com/gvegayon/PM566-labs/commit/a431fc9945ee54fb4de85cc5a0ed224abb4780d7)
+    .
 
-  - The user’s shiyushen is available
-    [here](labs-week07/lab-shiyushen.html).
+  - shiyushen’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-shiyushen.html).
 
-  - The user’s stephtring is available
-    [here](labs-week07/lab-stephtring.html).
+  - stephtring’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-stephtring.html).
 
-  - The user’s svannord is available
-    [here](labs-week07/lab-svannord.html).
+  - svannord’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week07/lab-svannord.html).

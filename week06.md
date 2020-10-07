@@ -1003,7 +1003,7 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 –standalone –section-divs –template
 /home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/h/default.html
 –no-highlight –variable highlightjs=1 –variable ‘theme:bootstrap’
-–include-in-header /tmp/RtmpWtZdBg/rmarkdown-str30ec65078d01.html
+–include-in-header /tmp/Rtmp70DoGR/rmarkdown-str41d7eb2d4e9.html
 –mathjax –variable
 ‘mathjax-url:<https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML>’
 –lua-filter
@@ -1018,27 +1018,42 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 
   - The md of user HopeW233 was not able to be knitted.
 
-  - The user’s RuowenWang123 is available
-    [here](homeworks-week06/homework-RuowenWang123.html).
+  - RuowenWang123’s homework was downloaded directly and is available
+    [here](../../raw/master/homeworks-week06/homework-RuowenWang123.html).
+    The original file is available
+    [here](https://github.com/RuowenWang123/PM566-labs/commit/822e1bf4c5f9627c9ddd7757ec48e52cdcd0cd1e)
+    .
 
-  - The user’s hankezhe is available
-    [here](homeworks-week06/homework-hankezhe.html).
+  - hankezhe’s homework was downloaded directly and is available
+    [here](../../raw/master/homeworks-week06/homework-hankezhe.html).
+    The original file is available
+    [here](https://github.com/HopeW233/Pm566HW/commit/aad73137dc25a272f6e96a6518f1d1fd4567da8d)
+    .
 
-  - The user’s stephtring is available
-    [here](homeworks-week06/homework-stephtring.html).
+  - stephtring’s homework was downloaded directly and is available
+    [here](../../raw/master/homeworks-week06/homework-stephtring.html).
+    The original file is available
+    [here](https://github.com/RuowenWang123/PM566-labs/commit/822e1bf4c5f9627c9ddd7757ec48e52cdcd0cd1e)
+    .
 
   - The Rmd of user bcruiz was not able to be knitted.
 
-  - The user’s MingzhiYe16 is available
-    [here](homeworks-week06/homework-MingzhiYe16.html).
+  - MingzhiYe16’s homework was downloaded directly and is available
+    [here](../../raw/master/homeworks-week06/homework-MingzhiYe16.html).
+    The original file is available
+    [here](https://github.com/HopeW233/Pm566HW/commit/aad73137dc25a272f6e96a6518f1d1fd4567da8d)
+    .
 
-  - The user’s Luqing521 is available
-    [here](homeworks-week06/homework-Luqing521.html).
+  - Luqing521’s homework was downloaded directly and is available
+    [here](../../raw/master/homeworks-week06/homework-Luqing521.html).
+    The original file is available
+    [here](https://github.com/RuowenWang123/PM566-labs/commit/822e1bf4c5f9627c9ddd7757ec48e52cdcd0cd1e)
+    .
 
 <!-- end list -->
 
     ## Warning in normalizePath(path, winslash = winslash,
-    ## mustWork = mustWork): path[1]="/tmp/RtmpWtZdBg/PM566-
+    ## mustWork = mustWork): path[1]="/tmp/Rtmp70DoGR/PM566-
     ## Homework-620cb52e89e358e7f2905fec9f0d0e291e8b4015/Homework%202.Rmd": No such
     ## file or directory
 
@@ -1050,15 +1065,18 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 
   - The md of user eshkim1021 was not able to be knitted.
 
-  - The user’s jiaheche is available
-    [here](labs-week06/lab-jiaheche.html).
+  - jiaheche’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week06/lab-jiaheche.html). The original
+    file is available
+    [here](https://github.com/jiaheche/pm566-projects/commit/62a51a6d890fd9b9ff2e25138ddbd7ae81329005)
+    .
 
   - The md of user hankezhe was not able to be knitted.
 
 <!-- end list -->
 
     ## Warning in normalizePath(path, winslash = winslash, mustWork = mustWork):
-    ## path[1]="/tmp/RtmpWtZdBg/PM566-labs-d3b72ca8b74409c92404b6d384dc474c8f5cf75d/
+    ## path[1]="/tmp/Rtmp70DoGR/PM566-labs-d3b72ca8b74409c92404b6d384dc474c8f5cf75d/
     ## Lab%206.Rmd": No such file or directory
 
   - The Rmd of user mbolshakova was not able to be knitted.
@@ -1075,7 +1093,7 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 
   - The Rmd of user Shan-shan-666 was not able to be knitted.
 
-  - The user’s Luqing521 is available
-    [here](labs-week06/lab-Luqing521.html).
+  - Luqing521’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week06/lab-Luqing521.html).
 
   - The Rmd of user shawnyeusc was not able to be knitted.

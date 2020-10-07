@@ -133,10 +133,13 @@ for (doc in doctype) {
         destfile = sprintf("%s/%s-%s.html", dname, doc, u)
       )
       
-      cat(sprintf(
-        "\n- The user's %s is available [here](%s).\n",
-        u, sprintf("%s/%s-%s.html", dname, doc, u)
-        ))
+      cat(
+        sprintf(
+          "\n- %s's %s was downloaded directly and is available [here](../../raw/master/%s).",
+          u, doc, sprintf("%s/%s-%s.html", dname, doc, u)
+          ),
+        sprintf("The original file is available [here](%s)\n.", homeworks$commit_url[html])
+        )
       
       next
       
@@ -162,10 +165,13 @@ for (doc in doctype) {
       ), error = function(e) e)
       
       if (!inherits(out, "error")) {
-        cat(sprintf(
-          "\n- The user's %s is available [here](%s).\n",
-          u, sprintf("%s/%s-%s.html", dname, doc, u)
-          ))
+        cat(
+          sprintf(
+            "\n- %s's %s was downloaded as a md file and compiled [here](../../raw/master/%s).\n",
+            u, doc, sprintf("%s/%s-%s.html", dname, doc, u)
+            ),
+          sprintf("The original file is available [here](%s)\n.", homeworks$commit_url[html])
+          )
         
       } else {
         cat("\n- The md of user ", u, " was not able to be knitted.\n")    
@@ -195,10 +201,13 @@ for (doc in doctype) {
       ), error = function(e) e)
       
       if (!inherits(out, "error")) {
-        cat(sprintf(
-          "\n- The user's %s is available [here](%s).\n",
-          u, sprintf("%s/%s-%s.html", dname, doc, u)
-          ))
+        cat(
+          sprintf(
+            "\n- %s's %s was downloaded as Rmd and compiled [here](../../raw/master/%s).\n",
+            u, doc, sprintf("%s/%s-%s.html", dname, doc, u)
+            ),
+          sprintf("The original file is available [here](%s)\n.", homeworks$commit_url[html])
+          )
         
       } else {
         cat("\n- The Rmd of user ", u, " was not able to be knitted.\n")    

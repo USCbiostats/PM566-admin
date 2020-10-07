@@ -957,13 +957,13 @@ lab
     ## 
     ##     intersect, setdiff, setequal, union
 
-    ## ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
+    ## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
 
     ## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
     ## ✓ tibble  3.0.2     ✓ forcats 0.5.0
     ## ✓ tidyr   1.1.0
 
-    ## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
     ## x dplyr::between()   masks data.table::between()
     ## x dplyr::filter()    masks stats::filter()
     ## x dplyr::first()     masks data.table::first()
@@ -991,7 +991,7 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 –standalone –section-divs –template
 /home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/h/default.html
 –no-highlight –variable highlightjs=1 –variable ‘theme:bootstrap’
-–include-in-header /tmp/RtmpWtZdBg/rmarkdown-str30ec69109b50.html
+–include-in-header /tmp/Rtmp70DoGR/rmarkdown-str41d712d3e5fc.html
 –mathjax –variable
 ‘mathjax-url:<https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML>’
 –lua-filter
@@ -1004,40 +1004,66 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 
 ## Links to homework
 
-  - The user’s asuasu95 is available
-    [here](homeworks-week04/homework-asuasu95.html).
-
-## Links to lab
+  - asuasu95’s homework was downloaded directly and is available
+    [here](../../raw/master/homeworks-week04/homework-asuasu95.html).
+    The original file is available
+    [here](https://github.com/asuasu95/pm566-hw1/commit/ba8849cbc2c5c704cd4f813f01409a487b996b61)
+    . \#\# Links to lab
 
   - The Rmd of user Shan-shan-666 was not able to be knitted.
 
-  - The user’s hankezhe is available
-    [here](labs-week04/lab-hankezhe.html).
+  - hankezhe’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week04/lab-hankezhe.html). The original
+    file is available
+    [here](https://github.com/Shan-shan-666/PM566/commit/3618e211998d25a95f729c8cc8c9e931d4f13b02)
+    .
 
 <!-- end list -->
 
     ## Warning in normalizePath(path, winslash = winslash, mustWork = mustWork):
-    ## path[1]="/tmp/RtmpWtZdBg/PM-566-Lab-d04acd35b8fb602882a4610fd040844b1efe6fd2/
+    ## path[1]="/tmp/Rtmp70DoGR/PM-566-Lab-d04acd35b8fb602882a4610fd040844b1efe6fd2/
     ## Lab%204%20Exercises.Rmd": No such file or directory
 
   - The Rmd of user eshkim1021 was not able to be knitted.
 
-  - The user’s jiaheche is available
-    [here](labs-week04/lab-jiaheche.html).
+  - jiaheche’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week04/lab-jiaheche.html). The original
+    file is available
+    [here](https://github.com/hankezhe/PM566-LAB-ASSIGNMENT/commit/1eef39c0305fcd1fa8e7618ee9f7347caaa4eaf4)
+    .
 
-  - The user’s HopeW233 is available
-    [here](labs-week04/lab-HopeW233.html).
+  - HopeW233’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week04/lab-HopeW233.html). The original
+    file is available
+    [here](https://github.com/hankezhe/PM566-LAB-ASSIGNMENT/commit/1eef39c0305fcd1fa8e7618ee9f7347caaa4eaf4)
+    .
 
-  - The user’s Luqing521 is available
-    [here](labs-week04/lab-Luqing521.html).
+  - Luqing521’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week04/lab-Luqing521.html). The
+    original file is available
+    [here](https://github.com/Shan-shan-666/PM566/commit/3618e211998d25a95f729c8cc8c9e931d4f13b02)
+    .
 
-  - The user’s asuasu95 is available
-    [here](labs-week04/lab-asuasu95.html).
+  - asuasu95’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week04/lab-asuasu95.html). The original
+    file is available
+    [here](https://github.com/Shan-shan-666/PM566/commit/3618e211998d25a95f729c8cc8c9e931d4f13b02)
+    .
 
-  - The user’s bcruiz is available [here](labs-week04/lab-bcruiz.html).
+  - bcruiz’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week04/lab-bcruiz.html). The original
+    file is available
+    [here](https://github.com/Shan-shan-666/PM566/commit/3618e211998d25a95f729c8cc8c9e931d4f13b02)
+    .
 
-  - The user’s shiyushen is available
-    [here](labs-week04/lab-shiyushen.html).
+  - shiyushen’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week04/lab-shiyushen.html). The
+    original file is available
+    [here](https://github.com/Shan-shan-666/PM566/commit/3618e211998d25a95f729c8cc8c9e931d4f13b02)
+    .
 
-  - The user’s Weijia-H is available
-    [here](labs-week04/lab-Weijia-H.html).
+  - Weijia-H’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week04/lab-Weijia-H.html). The original
+    file is available
+    [here](https://github.com/Shan-shan-666/PM566/commit/3618e211998d25a95f729c8cc8c9e931d4f13b02)
+    .

@@ -1016,7 +1016,7 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 –standalone –section-divs –template
 /home/george/R/x86\_64-pc-linux-gnu-library/4.0/rmarkdown/rmd/h/default.html
 –no-highlight –variable highlightjs=1 –variable ‘theme:bootstrap’
-–include-in-header /tmp/RtmpWtZdBg/rmarkdown-str30ec19afc8a9.html
+–include-in-header /tmp/Rtmp70DoGR/rmarkdown-str41d732057634.html
 –mathjax –variable
 ‘mathjax-url:<https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML>’
 –lua-filter
@@ -1029,59 +1029,64 @@ html4 –from markdown+autolink\_bare\_uris+tex\_math\_single\_backslash
 
 ## Links to homework
 
-  - The user’s USCbiostats is available
-    [here](homeworks-week05/homework-USCbiostats.html).
+  - USCbiostats’s homework was downloaded directly and is available
+    [here](../../raw/master/homeworks-week05/homework-USCbiostats.html).
+    The original file is available [here](NA) . \#\# Links to lab
 
-## Links to lab
+  - gvegayon’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-gvegayon.html).
 
-  - The user’s gvegayon is available
-    [here](labs-week05/lab-gvegayon.html).
+  - hankezhe’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week05/lab-hankezhe.html). The original
+    file is available
+    [here](https://github.com/hankezhe/PM566-LAB-ASSIGNMENT/commit/75fdc27bed1cc7652787b423ad91b8ccf7bc27fe)
+    .
 
-  - The user’s hankezhe is available
-    [here](labs-week05/lab-hankezhe.html).
+  - HopeW233’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-HopeW233.html).
 
-  - The user’s HopeW233 is available
-    [here](labs-week05/lab-HopeW233.html).
+  - mbolshakova’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-mbolshakova.html).
 
-  - The user’s mbolshakova is available
-    [here](labs-week05/lab-mbolshakova.html).
+  - asuasu95’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-asuasu95.html).
 
-  - The user’s asuasu95 is available
-    [here](labs-week05/lab-asuasu95.html).
+  - yina-liu’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-yina-liu.html).
 
-  - The user’s yina-liu is available
-    [here](labs-week05/lab-yina-liu.html).
-
-  - The user’s eshkim1021 is available
-    [here](labs-week05/lab-eshkim1021.html).
+  - eshkim1021’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-eshkim1021.html).
 
   - The Rmd of user Shan-shan-666 was not able to be knitted.
 
-  - The user’s shawnyeusc is available
-    [here](labs-week05/lab-shawnyeusc.html).
+  - shawnyeusc’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-shawnyeusc.html).
 
   - The Rmd of user jiqingwu1997 was not able to be knitted.
 
-  - The user’s ameihao is available
-    [here](labs-week05/lab-ameihao.html).
+  - ameihao’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-ameihao.html).
 
-  - The user’s shiyushen is available
-    [here](labs-week05/lab-shiyushen.html).
+  - shiyushen’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-shiyushen.html).
 
   - The Rmd of user slee2424 was not able to be knitted.
 
-  - The user’s Luqing521 is available
-    [here](labs-week05/lab-Luqing521.html).
+  - Luqing521’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-Luqing521.html).
 
-  - The user’s stephtring is available
-    [here](labs-week05/lab-stephtring.html).
+  - stephtring’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-stephtring.html).
 
-  - The user’s cbegay89 is available
-    [here](labs-week05/lab-cbegay89.html).
+  - cbegay89’s lab was downloaded as a md file and compiled
+    [here](../../raw/master/labs-week05/lab-cbegay89.html).
 
   - The Rmd of user Weijia-H was not able to be knitted.
 
-  - The user’s suyeonry is available
-    [here](labs-week05/lab-suyeonry.html).
+  - suyeonry’s lab was downloaded directly and is available
+    [here](../../raw/master/labs-week05/lab-suyeonry.html). The original
+    file is available
+    [here](https://github.com/hankezhe/PM566-LAB-ASSIGNMENT/commit/75fdc27bed1cc7652787b423ad91b8ccf7bc27fe)
+    .
 
   - The user MingzhiYe16 didn’t uploaded either the Rmd or HTML files.
