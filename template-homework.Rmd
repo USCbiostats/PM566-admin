@@ -208,7 +208,7 @@ for (i in seq_along(table_final)) {
   repo_i   <- gsub("/commit/.+", "", repo_i)
   
   table_final[[i]]$html_local <- sprintf(
-    "[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/%s/%s)",
+    "[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/master/%s/%s)",
     params$folder, sprintf("%s.html", dat$user[i])
     
   )
