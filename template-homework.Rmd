@@ -1,0 +1,164 @@
+---
+title: "Assignment 2"
+output: github_document
+params:
+  file: "week06-commits.csv"
+  cache: TRUE
+---
+
+```{r setup, echo = FALSE}
+source("list_cross_ref_api.R")
+```
+
+```{r token, echo = FALSE}
+# Setting up the token
+if (file.exists(".github_app.R")) {
+  # See
+  # https://github.com/r-lib/httr/blob/cb4e20c9e0b38c0c020a8756db8db7a882288eaf/demo/oauth2-github.r
+  # For a detailed example
+  source(".github_app.R")
+  token <- oauth2.0_token(
+    endpoint = oauth_endpoints("github"),
+    app      = github_app,
+    config   = httr::config(connecttimeout = 60)
+    )
+  token <- httr::config(token = token)
+} else {
+  token <- NULL
+}
+```
+
+
+```{r collect-data, echo = FALSE, message=FALSE, cache = params$cache, warning=FALSE}
+dat <- fread(params$file)
+dat[, commit_url := fifelse(commit_url == "", NA_character_, commit_url)]
+
+commits <- vector("list", nrow(dat))
+files   <- commits
+
+for (i in 1:nrow(dat)) {
+  
+  # Messaging
+  message("Starting with user ", dat$user[i], ": ", appendLF = FALSE)
+  
+  if (is.na(dat$commit_url[i])) {
+    message("skipping.")
+    next
+  }
+  
+  # Parsing url
+  url_i    <- dat$commit_url[i]
+  repo_i   <- gsub("(https?://)?github.com/", "", url_i)
+  commit_i <- gsub(".+/commit/", "", repo_i)
+  repo_i   <- gsub("/commit/.+", "", repo_i)
+  
+  message("Getting commits ...", appendLF = FALSE)
+  commits[[i]] <- commit_info(
+    commit = commit_i, repo = repo_i,
+    config = c(httr::config(connecttimeout=60), token)
+    )
+  
+  message("Getting files ...", appendLF = FALSE)
+  files[[i]] <- list_files(
+    repo = repo_i,
+    commit = commit_i,
+    config = c(httr::config(connecttimeout=60), token)
+    )
+  message("done.")
+}
+
+```
+
+```{r checking-the-files, echo=FALSE, warning=FALSE}
+table_final <- vector("list", nrow(dat))
+for (i in seq_along(files)) {
+  
+  # Parsing url
+  url_i    <- dat$commit_url[i]
+  repo_i   <- gsub("(https?://)?github.com/", "", url_i)
+  commit_i <- gsub(".+/commit/", "", repo_i)
+  repo_i   <- gsub("/commit/.+", "", repo_i)
+  
+  # Building the final table
+  table_final[[i]] <- data.table(
+    user   = dat$user[i],
+    repo   = sprintf(
+      "[%s](https://github.com/%s/tree/%s)",
+      gsub(".+/", "", repo_i), repo_i, commit_i),
+    commit = sprintf("[%s](%s)", commits[[i]]$date, dat$commit_url[i]),
+    rmd = "", md = "", html = ""
+    )
+  
+  # Skipping if empty
+  if (length(commits[[i]]) == 0) 
+    next
+  
+  # Checking the file names
+  fnames_i      <- unlist(commits[[i]]$fnames)
+  fnames_full_i <- files[[i]]$name
+  
+  # Looking for either an Rmd, md, or html
+  rmd  <- which(grepl("\\.rmd$", fnames_i, ignore.case = TRUE))
+  md   <- which(grepl("\\.md$", fnames_i, ignore.case = TRUE))
+  html <- which(grepl("\\.html$", fnames_i, ignore.case = TRUE))
+  
+  # Looking for the relevant pattern
+  pattern <- if (length(rmd)) {
+    gsub("\\.rmd$", "", fnames_i[rmd[1L]], ignore.case = TRUE)
+  } else if (length(md)) {
+      gsub("\\.md$", "", fnames_i[md[1L]], ignore.case = TRUE)
+  } else if (length(html)) {
+      gsub("\\.html$", "", fnames_i[html[1L]], ignore.case = TRUE)
+  }
+  
+  if (!length(pattern))
+    next
+  
+  # Finding the files
+  rmd <- which(
+    grepl(sprintf("^%s[.]rmd$", pattern), files[[i]]$name, ignore.case = TRUE)
+    )
+
+  md <- which(
+    grepl(sprintf("^%s[.]md$", pattern), files[[i]]$name, ignore.case = TRUE)
+    )
+  
+  html <- which(
+    grepl(sprintf("^%s[.]html?$", pattern), files[[i]]$name, ignore.case = TRUE)
+    )
+  
+  # Downloading the files
+  # TBD
+  
+  # Replacing links
+  if (length(rmd)) {
+    table_final[[i]]$rmd <- with(
+      files[[i]],
+      sprintf(
+        "[**view**](%s)/[**download**](%s)",
+        html_url[rmd[1L]],
+        download_url[rmd[1L]]))
+  }
+  if (length(html)) {
+    table_final[[i]]$html <- with(
+      files[[i]],
+      sprintf(
+        "[**view**](https://ghcdn.rawgit.org/%s/%s/%s)/[**download**](%s)",
+        repo_i, commit_i, path[html[1L]],
+        download_url[html[1L]]))
+  }
+  if (length(md)) {
+    table_final[[i]]$md <- with(
+      files[[i]],
+      sprintf(
+        "[**view**](%s)/[**download**](%s)",
+        html_url[md[1L]],
+        download_url[md[1L]]))
+  }
+  
+}
+
+table_final <- rbindlist(table_final)
+knitr::kable(table_final, format = "html")
+```
+

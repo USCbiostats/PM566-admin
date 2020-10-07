@@ -117,27 +117,101 @@ commit_info <- function(
   response <- tryCatch(do.call(httr::GET, dots), error = function(e) e)
   
   if (inherits(response, "error")) {
-    warning("httr::GET failed.")
+    warning("httr::GET failed:", response)
     return(data.table(
-      message = NA_character_,
-      flinks  = list(),
-      fnames  = list()
+      date     = NA_character_,
+      message  = NA_character_,
+      comments_url = NA_character_,
+      comments = NA_character_,
+      flinks   = list(),
+      fnames   = list()
     ))
   }
   
   commit <- httr::content(response)
   
   msg    <- commit$commit$message
+  comments <- commit$comments_url
   fnames <- lapply(commit$files, "[[", "filename")
   flinks <- lapply(commit$files, "[[", "blob_url")
   
   
   data.table(
+    date    = commit$commit$author$date,
     message = if (length(msg) == 0) NA_character_ else msg,
+    comments_url = if (length(comments) == 0) NA_character_ else comments,
     flinks  = list(flinks),
     fnames  = list(fnames)
   )
   
 }
 
-# ans <- list_cross_ref_api(25)
+#' Knit a (R)markdown document from a given commit
+#' This function will download a file from github in the form of
+#' https://github.com/[usrname]/(raw|blob)/[commit id]/[path to doc].(Rmd|md)
+download_and_knit <- function(url, ...) {
+  
+  fn <- stringr::str_extract(url, "(?<=/(raw|blob)/[[:alnum:]]{10,500}/).+")
+  gh <- gsub(paste0("/?",fn), "", url)
+  gh <- paste0(gsub("/(raw|blob)/", "/archive/", gh), ".zip")
+  
+  # Downloading
+  tmpzip <- tempfile(fileext = ".zip")
+  download.file(gh, destfile = tmpzip)
+  unzip(tmpzip, exdir = tempdir())
+  
+  # Getting the file name
+  fn_gh <- stringr::str_extract(
+    gh,
+    "(?<=/)[[:alnum:]-_]+/archive/[[:alnum:]]+"
+  )
+  
+  fn_gh <- paste0(tempdir(), "/", gsub("/archive/", "-", fn_gh))
+  
+  rmarkdown::render(
+    input = file.path(fn_gh, fn),
+    ...
+  )
+  
+}
+
+
+list_files <- function(
+  repo,
+  commit = "master",
+  baseurl = "https://api.github.com/repos",
+  ...
+) {
+  
+  # Checking the arguments of curl -X GET
+  dots <- list(...)
+  if ("config" %in% names(dots))
+    dots$config <- c(dots$config, httr::add_headers(
+      Accept = "application/vnd.github.mockingbird-preview+json"
+    ))
+  else
+    dots$config <- httr::add_headers(
+      Accept = "application/vnd.github.mockingbird-preview+json"
+    )
+  
+  dots$url <- sprintf("%s/%s/contents?ref=%s", baseurl, repo, commit)
+  
+  response <- tryCatch(do.call(httr::GET, dots), error = function(e) e)
+  
+  if (inherits(response, "error")) {
+    warning("httr::GET failed:", response)
+    return(data.table(
+      name = NA_character_,
+      path = NA_character_,
+      download_url = NA_character_,
+      html_url = NA_character_
+    ))
+  }
+  
+  dat <- content(response)
+  
+  dat <- lapply(dat, "[", c("name", "path", "download_url", "html_url"))
+  rbindlist(dat, fill = TRUE)
+  
+  
+}
