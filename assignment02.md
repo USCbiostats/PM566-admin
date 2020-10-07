@@ -1,6 +1,11 @@
 Assignment 2
 ================
 
+``` r
+table_final <- rbindlist(table_final)
+knitr::kable(table_final[,.(user, repo, commit, rmd, md, html, html_local)], format = "html")
+```
+
 <table>
 
 <thead>
@@ -40,6 +45,12 @@ md
 <th style="text-align:left;">
 
 html
+
+</th>
+
+<th style="text-align:left;">
+
+html\_local
 
 </th>
 
@@ -85,6 +96,12 @@ cbegay89
 
 </td>
 
+<td style="text-align:left;">
+
+[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/assignment-02/cbegay89.html)
+
+</td>
+
 </tr>
 
 <tr>
@@ -114,6 +131,10 @@ mbolshakova
 <td style="text-align:left;">
 
 [**view**](https://github.com/mbolshakova/PM566-Homework/blob/46418c081490990b95db519c706376d0768dcc14/Homework-2.md)/[**download**](https://raw.githubusercontent.com/mbolshakova/PM566-Homework/46418c081490990b95db519c706376d0768dcc14/Homework-2.md)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -159,6 +180,10 @@ jiaheche
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -184,6 +209,10 @@ robindu552
 <td style="text-align:left;">
 
 [**view**](https://github.com/robindu552/HW2/blob/a0e287e8f2f3920ac35699a6e288791f0271fd83/HW2.Rmd)/[**download**](https://raw.githubusercontent.com/robindu552/HW2/a0e287e8f2f3920ac35699a6e288791f0271fd83/HW2.Rmd)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -233,6 +262,10 @@ ameihao
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -271,6 +304,10 @@ Weijia-H
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -296,6 +333,10 @@ Icygrey
 <td style="text-align:left;">
 
 [**view**](https://github.com/Icygrey/PM566/blob/e995f2eec038f26804b4d13667c5cacd20e500ab/TH-hw2_pm566.Rmd)/[**download**](https://raw.githubusercontent.com/Icygrey/PM566/e995f2eec038f26804b4d13667c5cacd20e500ab/TH-hw2_pm566.Rmd)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -343,6 +384,12 @@ eshkim1021
 
 </td>
 
+<td style="text-align:left;">
+
+[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/assignment-02/eshkim1021.html)
+
+</td>
+
 </tr>
 
 <tr>
@@ -374,6 +421,10 @@ slee2424
 <td style="text-align:left;">
 
 [**view**](https://github.com/slee2424/pm566_assignments/blob/7bc1251da675984f3178b2915815644ef4cfde4f/Assignment2.md)/[**download**](https://raw.githubusercontent.com/slee2424/pm566_assignments/7bc1251da675984f3178b2915815644ef4cfde4f/Assignment2.md)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -421,6 +472,10 @@ lysethan
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -456,6 +511,10 @@ yina-liu
 <td style="text-align:left;">
 
 [**view**](https://ghcdn.rawgit.org/yina-liu/PM566-Assignments/77ad92128dd8f9e1c2f69889092eeaccccb3a04a/PM566-Assignment2.html)/[**download**](https://raw.githubusercontent.com/yina-liu/PM566-Assignments/77ad92128dd8f9e1c2f69889092eeaccccb3a04a/PM566-Assignment2.html)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -497,6 +556,10 @@ ashwathkraj
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -516,6 +579,10 @@ Luqing521
 <td style="text-align:left;">
 
 [2020-09-24T20:08:19Z](https://github.com/Luqing521/PM566_Assignment/commit/b5e54cd01c4ae99fb2468da6d5d7d383ac2fdd83)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -569,6 +636,12 @@ bcruiz
 
 </td>
 
+<td style="text-align:left;">
+
+[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/assignment-02/bcruiz.html)
+
+</td>
+
 </tr>
 
 <tr>
@@ -603,6 +676,10 @@ NA
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -622,6 +699,10 @@ Shan-shan-666
 <td style="text-align:left;">
 
 [2020-09-23T18:36:17Z](https://github.com/Shan-shan-666/PM566/commit/bc1bc3ea27d26b664aa7e331ec52a87f545afe83)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -675,6 +756,10 @@ shiyushen
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -694,6 +779,10 @@ asuasu95
 <td style="text-align:left;">
 
 NA
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -749,6 +838,10 @@ stephtring
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -768,6 +861,10 @@ svannord
 <td style="text-align:left;">
 
 NA
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -821,6 +918,10 @@ HopeW233
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -846,6 +947,10 @@ RuowenWang123
 <td style="text-align:left;">
 
 [**view**](https://github.com/RuowenWang123/PM566-labs/blob/822e1bf4c5f9627c9ddd7757ec48e52cdcd0cd1e/Assignment%202.Rmd)/[**download**](https://raw.githubusercontent.com/RuowenWang123/PM566-labs/822e1bf4c5f9627c9ddd7757ec48e52cdcd0cd1e/Assignment%202.Rmd)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -895,6 +1000,10 @@ jiqingwu1997
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -930,6 +1039,10 @@ shawnyeusc
 <td style="text-align:left;">
 
 [**view**](https://ghcdn.rawgit.org/shawnyeusc/PM566-Assignment/fcbf8b9bd1628a12bfcdf8b4b55cddbe9b9efe60/ASSIGNMENT2.html)/[**download**](https://raw.githubusercontent.com/shawnyeusc/PM566-Assignment/fcbf8b9bd1628a12bfcdf8b4b55cddbe9b9efe60/ASSIGNMENT2.html)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 
@@ -971,6 +1084,10 @@ MingzhiYe16
 
 </td>
 
+<td style="text-align:left;">
+
+</td>
+
 </tr>
 
 <tr>
@@ -1008,6 +1125,10 @@ hankezhe
 <td style="text-align:left;">
 
 [**view**](https://ghcdn.rawgit.org/hankezhe/PM566-LAB-ASSIGNMENT/c9fec0ae71f9404169fbf180d8de37d63b1465dd/HW2.html)/[**download**](https://raw.githubusercontent.com/hankezhe/PM566-LAB-ASSIGNMENT/c9fec0ae71f9404169fbf180d8de37d63b1465dd/HW2.html)
+
+</td>
+
+<td style="text-align:left;">
 
 </td>
 

@@ -3,10 +3,11 @@ title: "Assignment 2"
 output: github_document
 params:
   file: "week06-commits.csv"
+  folder: "assignment-02"
   cache: TRUE
 ---
 
-```{r setup, echo = FALSE}
+```{r setup000, echo = FALSE}
 source("list_cross_ref_api.R")
 ```
 
@@ -86,7 +87,7 @@ for (i in seq_along(files)) {
       "[%s](https://github.com/%s/tree/%s)",
       gsub(".+/", "", repo_i), repo_i, commit_i),
     commit = sprintf("[%s](%s)", commits[[i]]$date, dat$commit_url[i]),
-    rmd = "", md = "", html = ""
+    rmd = "", md = "", html = "", rmd_file = ""
     )
   
   # Skipping if empty
@@ -138,6 +139,8 @@ for (i in seq_along(files)) {
         "[**view**](%s)/[**download**](%s)",
         html_url[rmd[1L]],
         download_url[rmd[1L]]))
+    
+    table_final[[i]]$rmd_file <- files[[i]]$html_url[rmd[1]]
   }
   if (length(html)) {
     table_final[[i]]$html <- with(
@@ -157,8 +160,65 @@ for (i in seq_along(files)) {
   }
   
 }
+```
 
+
+```{r rendering-when-possible, warning=FALSE, message=FALSE, echo = FALSE}
+if (!dir.exists(params$folder))
+  dir.create(params$folder)
+
+for (i in seq_along(table_final)) {
+
+  # Making room
+  table_final[[i]]$html_local <- ""
+  
+  if (is.na(dat$commit_url[i]))
+    next
+  
+  if (table_final[[i]]$rmd_file == "")
+    next
+  
+  if (table_final[[i]]$html != "")
+    next
+  
+  fn <- sprintf("%s.html", dat$user[i])
+  if (!file.exists(file.path(params$folder, fn))) {
+    
+    tmp <- tryCatch(download_and_knit(
+      url         = table_final[[i]]$rmd_file,
+      output_file = fn,
+      output_format = rmarkdown::html_document(),
+      output_dir    = params$folder,
+      quiet       = TRUE,
+      envir = new.env()
+    ), error = function(e) e)
+    
+    if (inherits(tmp, "error")) {
+      message(tmp)
+      next
+    }
+    
+  } else 
+    message("already rendered ", dat$user[i])
+  
+  # Parsing url
+  url_i    <- dat$commit_url[i]
+  repo_i   <- gsub("(https?://)?github.com/", "", url_i)
+  commit_i <- gsub(".+/commit/", "", repo_i)
+  repo_i   <- gsub("/commit/.+", "", repo_i)
+  
+  table_final[[i]]$html_local <- sprintf(
+    "[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/%s/%s)",
+    params$folder, sprintf("%s.html", dat$user[i])
+    
+  )
+  
+}
+```
+
+
+```{r print}
 table_final <- rbindlist(table_final)
-knitr::kable(table_final, format = "html")
+knitr::kable(table_final[,.(user, repo, commit, rmd, md, html, html_local)], format = "html")
 ```
 

@@ -155,6 +155,8 @@ download_and_knit <- function(url, ...) {
   gh <- gsub(paste0("/?",fn), "", url)
   gh <- paste0(gsub("/(raw|blob)/", "/archive/", gh), ".zip")
   
+  fn <- utils::URLdecode(fn)
+  
   # Downloading
   tmpzip <- tempfile(fileext = ".zip")
   download.file(gh, destfile = tmpzip)
