@@ -98,7 +98,7 @@ cbegay89
 
 <td style="text-align:left;">
 
-[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/assignment-02/cbegay89.html)
+[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/master/assignment-02/cbegay89.html)
 
 </td>
 
@@ -386,7 +386,7 @@ eshkim1021
 
 <td style="text-align:left;">
 
-[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/assignment-02/eshkim1021.html)
+[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/master/assignment-02/eshkim1021.html)
 
 </td>
 
@@ -638,7 +638,7 @@ bcruiz
 
 <td style="text-align:left;">
 
-[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/assignment-02/bcruiz.html)
+[**x**](https://ghcdn.rawgit.org/USCbiostats/PM566-admin/master/assignment-02/bcruiz.html)
 
 </td>
 
