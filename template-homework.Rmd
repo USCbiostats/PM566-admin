@@ -1,10 +1,10 @@
 ---
-title: "Assignment 2"
+title: "Assignment 3"
 output: github_document
 params:
-  file: "week06-commits.csv"
-  folder: "assignment-02"
-  cache: TRUE
+  file: "week09-commits.csv"
+  folder: "assignment-03"
+  cache: FALSE
 ---
 
 ```{r setup000, echo = FALSE}
