@@ -1,9 +1,9 @@
 ---
-title: "Assignment 3"
+title: "Assignment 4"
 output: github_document
 params:
-  file: "week09-commits.csv"
-  folder: "assignment-03"
+  file: "week12-commits-hw4.csv"
+  folder: "assignment-04"
   cache: FALSE
 ---
 
